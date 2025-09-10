@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Cafe People Counter",
-  description: "Simple people counter for tracking cafe visitors",
+  title: "internal tools",
+  description: "internal tools",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}><div>{children}</div></body>
     </html>
   );
 }

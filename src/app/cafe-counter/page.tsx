@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function CafeCounter() {
   const [totalPeople, setTotalPeople] = useState(0);
   const [toGoPeople, setToGoPeople] = useState(0);
-  const [currentTime, setCurrentTime] = useState('');
+  const [currentTime, setCurrentTime] = useState("");
 
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
-      const pstTime = now.toLocaleString('en-US', {
-        timeZone: 'America/Los_Angeles',
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit',
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit',
+      const pstTime = now.toLocaleString("en-US", {
+        timeZone: "America/Los_Angeles",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
         hour12: false,
       });
       setCurrentTime(pstTime);
@@ -37,15 +37,15 @@ export default function CafeCounter() {
   return (
     <main className="flex flex-col h-screen min-w-xs w-full bg-black justify-between p-8">
       <div>
-        <h1 className="text-3xl font-bold text-white mb-8">cafe people counter</h1>
+        <div className="text-3xl font-bold text-white mb-8">cafe people counter</div>
 
         <div className="rounded-md mb-6">
-          <p className="text-sm text-white mb-1">current time (pst)</p>
-          <p className="text-xl font-mono font-bold text-white">{currentTime}</p>
+          <div className="text-sm text-white mb-1">current time (pst)</div>
+          <div className="text-xl font-mono font-bold text-white">{currentTime}</div>
         </div>
 
         <div className="rounded-md mb-6">
-          <p className="text-lg font-semibold text-white mb-2">number of people (all):</p>
+          <div className="text-lg font-semibold text-white mb-2">number of people (all):</div>
           <div className="flex items-center justify-between">
             <span className="text-4xl font-bold text-white">{totalPeople}</span>
             <div className="flex gap-3 mt-2">
@@ -56,7 +56,7 @@ export default function CafeCounter() {
         </div>
 
         <div className="rounded-lg">
-          <p className="text-lg font-semibold text-white mb-2">number of people (to-go):</p>
+          <div className="text-lg font-semibold text-white mb-2">number of people (to-go):</div>
           <div className="flex items-center justify-between">
             <span className="text-4xl font-bold text-white">{toGoPeople}</span>
             <div className="flex gap-3 mt-2">
